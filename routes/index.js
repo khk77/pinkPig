@@ -8,7 +8,7 @@ router.get('/', function(req, res, next) {
 	var addrOfMe = "0x912012121f4d273782ed648f7a8facf8e6e05571";
 	var filename = 'coinBox.sol';
 	var contractName = 'PigBox';
-	var contractAddress = '0x22b5df29d1c26e93bf95ec961bf3bf21c7f1363c';
+	var contractAddress = '0x8d947d2d91480f0ed183429308596fa4efa2240f';
 	var contractInfo = getMainData(addrOfMe, filename, contractName, contractAddress);
 	var nPeople = contractInfo.numPeople;
 	var cBalance = contractInfo.curBalance;

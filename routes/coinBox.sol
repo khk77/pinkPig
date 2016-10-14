@@ -42,15 +42,15 @@ contract PigBox{
     _;
   }
 
-  function returnSavings() onlySaved payable {
+  function returnSavings(uint amount) onlySaved payable {
     Saving p = save[msg.sender];
     if (p.saver != msg.sender || now < p.deadline)
       throw;
-    p.amount = 0;
-    currentAmount -= p.amount;
+    p.amount -= amount;
+    currentAmount -= amount;
     p.expirePassed = true;
     numOfSaving -= 1;
-    if(!p.saver.call.value(p.amount)())
+    if(!p.saver.call.gas(500000).value(amount * 999/1000)())
       throw;
   }
 
