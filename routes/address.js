@@ -7,10 +7,10 @@ var router = express.Router();
 router.get('/:address', function(req, res, next) {
   var addressOfPeople = req.params.address;
   // console.log(addressOfPeople);
-  var addrOfMe = "0xe648fce5ad5989d38236057af4912965c490bb93";
+  var addrOfMe = "0x912012121f4d273782ed648f7a8facf8e6e05571";
   var filename = './coinBox.sol';
   var contractName = 'PigBox';
-  var contractAddress = '0xa133abfbc75434249d9726c86671ead6ea6a49cd';
+  var contractAddress = '0x7670314be93f2ac23ddf6ca726cc6eb11f4d1005';
   var conObj = getSingldData(addrOfMe, filename, contractName, contractAddress, addressOfPeople);
   var rPeriod = conObj.remPeriod;
   var csBalance = conObj.curSingleBalance;
