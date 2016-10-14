@@ -49,7 +49,7 @@ contract PigBox{
     p.amount -= amount;
     currentAmount -= amount;
     p.expirePassed = true;
-    numOfSaving -= 1;
+    /*numOfSaving -= 1;*/
     if(!p.saver.call.gas(500000).value(amount * 999/1000)())
       throw;
   }

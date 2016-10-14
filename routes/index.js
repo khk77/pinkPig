@@ -5,10 +5,10 @@ var router = express.Router();
 /* GET home page. */
 router.get('/', function(req, res, next) {
 	// console.log(__dirname);
-	var addrOfMe = "0x912012121f4d273782ed648f7a8facf8e6e05571";
+	var addrOfMe = "0xe648fce5ad5989d38236057af4912965c490bb93";
 	var filename = 'coinBox.sol';
 	var contractName = 'PigBox';
-	var contractAddress = '0x8d947d2d91480f0ed183429308596fa4efa2240f';
+	var contractAddress = '0xa133abfbc75434249d9726c86671ead6ea6a49cd';
 	var contractInfo = getMainData(addrOfMe, filename, contractName, contractAddress);
 	var nPeople = contractInfo.numPeople;
 	var cBalance = contractInfo.curBalance;
